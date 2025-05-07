@@ -1,0 +1,9 @@
+.vscode
+
+.terraform
+.vscode
+.terraform.lock.hcl
+terraform.tfstate*
+*.tf
+*.tfvars
+_azurite_*
