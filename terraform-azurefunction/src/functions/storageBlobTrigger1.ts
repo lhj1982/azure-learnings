@@ -1,11 +1,11 @@
 import { app, InvocationContext } from "@azure/functions";
 
-export async function storageBlobTrigger(blob: Buffer, context: InvocationContext): Promise<void> {
+export async function storageBlobTrigger1(blob: Buffer, context: InvocationContext): Promise<void> {
     context.log(`Storage blob function processed blob "${context.triggerMetadata.name}" with size ${blob.length} bytes`);
 }
 
-app.storageBlob('storageBlobTrigger', {
+app.storageBlob('storageBlobTrigger1', {
     path: 'samples-workitems/{name}',
     connection: 'AzureWebJobsStorage',
-    handler: storageBlobTrigger
+    handler: storageBlobTrigger1
 });
